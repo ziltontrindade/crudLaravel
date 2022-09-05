@@ -43,7 +43,7 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        return $posts;
+        dd($posts);
     }
 
     public function update(Request $request)
@@ -60,7 +60,7 @@ class PostController extends Controller
 
     public function del(Request $request)
     {   
-        $post = Post::find(3);
+        $post = Post::find(1);
         //deletar todos os registros do banco
         //$post = Post::where('id','>',0)->delete();
         
