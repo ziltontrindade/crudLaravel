@@ -58,4 +58,18 @@ class PostController extends Controller
 
     }
 
+    public function del(Request $request)
+    {   
+        $post = Post::find(3);
+        //deletar todos os registros do banco
+        //$post = Post::where('id','>',0)->delete();
+        
+        if ($post){
+           return $post->delete();
+        }
+
+            return 'Não existe esse Id';
+
+    }
+
 }
